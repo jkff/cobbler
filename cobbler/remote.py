@@ -349,7 +349,7 @@ class CobblerXMLRPCInterface:
             self.events[event_id][3] = [] # clear the list of who has read it
         if thread_obj is not None:
             if new_state == EVENT_COMPLETE: 
-                thread_obj.logger.info("### TASK COMPLETE ###")
+                thread_obj.logger.info("### TASK COMPLETE ### Return value: %s" % thread_obj.return_value)
             if new_state == EVENT_FAILED: 
                 thread_obj.logger.error("### TASK FAILED ###")
 
